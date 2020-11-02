@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Czető József webfejlesztő bemutatkozó oldala">
+    <meta name="keywords"
+        content="Honlapkészítés, mobil applikáció fejlesztés, Nodejs, Angular, React, Vuejs, Mongodb, Azure">
     <title>About</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -105,11 +109,13 @@
 
         <h2 id="contact">Kapcsolat felvétel</h2>
 
-        <form action="index.html" id="contactForm">
+        <form action="index.html" id="contactForm" onsubmit="check()">
 
             <label for="name">Név:</label>
-            <input type="text" pattern=".{5,}" class="form-control" id="name" placeholder="név" required
+            <input type="text" minlength="5" class="form-control" id="name" placeholder="név" required
                 title="legalább 5 karakternek szerepelnie kell">
+
+            <!-- pattern=".{5,}" -->
 
             <label for="email">Email:</label>
             <input type="email" class="form-control" id="email" placeholder="email" required>
@@ -121,6 +127,7 @@
 
         </form>
     </main>
+
 
     <footer>
         <a href="#header" class="btn-footer">
